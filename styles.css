@@ -1,11 +1,9 @@
-/* Global Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body Styling */
 body {
     height: 100vh;
     width: 100vw;
@@ -13,23 +11,22 @@ body {
     justify-content: center;
     align-items: center;
     font-family: 'Arial', sans-serif;
-    background: #121212; /* Dark background */
-    color: #ffffff; /* Default text color */
+    background: #121212; 
+    color: #ffffff; 
     overflow: hidden;
 }
 
-/* Text Container Styling */
 .text-container {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 400px;
-    padding: 20px;
+    width: 60%;
+    padding: 0.8rem;
     border: 5px solid transparent;
     border-radius: 20px;
-    background: #1e1e1e; /* Slightly lighter dark */
-    animation: multicolorGlow 5s linear infinite; /* Multicolor rotating glow */
+    background: #1e1e1e; 
+    animation: multicolorGlow 5s linear infinite; 
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
     text-align: center;
 }
@@ -61,8 +58,9 @@ body {
 /* Typing Animation */
 .typing span {
     display: block;
-    font-size: 18px;
-    color: #ffffff; /* White text */
+    font-size: 1.7rem;
+    margin: 0.8rem auto;
+    color: #ffffff; 
     animation: fadeInText 2s ease-in-out forwards;
     opacity: 0;
 }
@@ -93,14 +91,13 @@ body {
     animation-delay: 6.5s;
 }
 
-/* Action Button Styling */
 .action-button {
     display: inline-block;
     margin-top: 20px;
     padding: 12px 24px;
-    font-size: 16px;
+    font-size: 1.5rem;
     color: #ffffff;
-    background: #1e1e1e; /* Dark button background */
+    background: #1e1e1e; 
     border: 2px solid #ffffff;
     border-radius: 5px;
     cursor: pointer;
@@ -111,7 +108,6 @@ body {
     transition: background 0.3s, transform 0.3s;
 }
 
-/* Button Glow Hover Effect */
 .action-button:hover {
     background: #ffffff;
     color: #121212;
@@ -119,7 +115,6 @@ body {
     transform: scale(1.1);
 }
 
-/* Show Button Animation */
 @keyframes showButton {
     0% {
         transform: scale(0.8);
@@ -128,5 +123,46 @@ body {
     100% {
         transform: scale(1);
         opacity: 1;
+    }
+}
+
+@media (min-width:521px) and (max-width:1150px) {
+
+    .text-container {
+        width: 75%;
+        padding: 0.7rem;
+    }
+        
+    /* Typing Animation */
+    .typing span {
+        font-size: 1.5rem;
+        margin: 0.6rem auto;
+    }
+            
+    .action-button {
+        margin-top: 20px;
+        padding: 12px 24px;
+        font-size: 1.3rem;
+    }
+        
+}
+
+@media (max-width:520px) {
+
+    .text-container {
+        width: 85%;
+        padding: 0.4rem;
+    }
+        
+    /* Typing Animation */
+    .typing span {
+        font-size: 0.8rem;
+        margin: 0.4rem auto;
+    }
+            
+    .action-button {
+        margin-top: 10px;
+        padding: 10px 15px;
+        font-size: 0.9rem;
     }
 }
